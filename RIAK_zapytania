@@ -1,0 +1,33 @@
+1)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Magda", "surname": "Kaczynska", "age": 25, "isMarried": false}' http://localhost:8098/buckets/s23675/keys/magda
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Ola", "surname": "Szpak", "age": 29, "isMarried": false}' http://localhost:8098/buckets/s23675/keys/ola
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Adam", "surname": "Zaba", "age": 22, "isMarried": false}' http://localhost:8098/buckets/s23675/keys/adam
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Pawel", "surname": "Lewandowski", "age": 32, "isMarried": true}' http://localhost:8098/buckets/s23675/keys/pawel
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Marcin", "surname": "Najman", "age": 35, "isMarried": false}' http://localhost:8098/buckets/s23675/keys/marcin
+
+2)
+curl -i -XGET  http://localhost:8098/buckets/s23675/keys/magda
+
+3)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Ola", "surname": "Szpak", "age": 29, "isMarried": false, "hasachild": false}' http://localhost:8098/buckets/s23675/keys/ola
+
+4)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Adam", "surname": "Zaba", "isMarried": false}' http://localhost:8098/buckets/s23675/keys/adam
+
+5)
+curl -i -XPUT -H "Content-Type: application/json" -d '{"name": "Marcin", "surname": "Najman", "age": 35, "isMarried": true}' http://localhost:8098/buckets/s23675/keys/marcin
+
+6)
+curl -i -XDELETE hhttp://localhost:8098/buckets/s23675/keys/pawel
+
+7)
+curl -i -XGET  http://localhost:8098/buckets/s23675/keys/iza
+
+8)
+curl -i -XPOST -H "Content-Type: application/json" -d '{"likescats": true}' http://localhost:8098/buckets/s23675/keys
+
+9) 
+curl -i -XGET  http://localhost:8098/buckets/s23675/keys/5cqQv9PAVS1hMVUmPQqFDqxFZhe
+
+10)
+curl -i -XDELETE http://localhost:8098/buckets/s23675/keys/5cqQv9PAVS1hMVUmPQqFDqxFZhe
